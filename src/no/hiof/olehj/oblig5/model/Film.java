@@ -4,8 +4,11 @@ import java.time.LocalDate;
 
 public class Film extends Produksjon implements Comparable<Film>{
 
-    public Film(String title, String beskrivelse, double length, LocalDate utgivelsesdato) {
+    private String bilde;
+
+    public Film(String title, String beskrivelse, double length, LocalDate utgivelsesdato, String bilde) {
         super(title, beskrivelse, length, utgivelsesdato);
+        this.bilde = bilde;
     }
 
     public Film(String title, double length) {

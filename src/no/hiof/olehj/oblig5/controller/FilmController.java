@@ -12,6 +12,8 @@ import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
 
+import java.io.File;
+
 public class FilmController {
 
     private static int filmRemember;
@@ -33,7 +35,10 @@ public class FilmController {
 
     @FXML
     public void initialize(){
-        filmListe.setItems(DataHandler.hentFilmData());
+
+        File kilde = new File("filmer_1000.csv");
+
+        filmListe.setItems(DataHandler.hentFilmData(kilde));
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override

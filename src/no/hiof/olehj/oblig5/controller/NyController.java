@@ -39,8 +39,9 @@ public class NyController {
         String nyFilmBeskrivelse = filmBeskrivelse.getText();
         LocalDate nyFilmUtgivelsesdato = filmUtgivelsesdato.getValue();
         int nyFilmSpilletid = Integer.valueOf(filmSpilletid.getText());
+        String nyBilde = null;
 
-        Film nyFilm = new Film(nyFilmTittel,nyFilmBeskrivelse,nyFilmSpilletid,nyFilmUtgivelsesdato);
+        Film nyFilm = new Film(nyFilmTittel,nyFilmBeskrivelse,nyFilmSpilletid,nyFilmUtgivelsesdato,nyBilde);
 
         DataHandler.leggTilFim(nyFilm);
 
