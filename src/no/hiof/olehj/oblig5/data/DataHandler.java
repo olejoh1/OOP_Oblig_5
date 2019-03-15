@@ -16,7 +16,9 @@ public class DataHandler {
 
     private final static ObservableList<Film> filmListe = FXCollections.observableArrayList();
 
-    public static ObservableList<Film> hentFilmData(File dataFilmListe){
+    public static ObservableList<Film> hentFilmData(){
+
+        File dataFilmListe = new File("filmer_1000.csv");
 
         try (BufferedReader bufretLeser = new BufferedReader(new FileReader(dataFilmListe))){
             String linje;

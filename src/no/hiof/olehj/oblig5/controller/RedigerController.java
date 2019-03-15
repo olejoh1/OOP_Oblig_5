@@ -35,9 +35,7 @@ public class RedigerController {
     @FXML
     public void initialize(){
 
-        File kilde = new File("filmer_1000.csv");
-
-        film = DataHandler.hentFilmData(kilde).get(filmRemember);
+        film = DataHandler.hentFilmData().get(filmRemember);
 
         filmTittel.setText(film.getTitle());
         filmBeskrivelse.setText(film.getBeskrivelse());
