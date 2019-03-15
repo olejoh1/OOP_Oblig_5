@@ -40,8 +40,6 @@ public class DataHandler {
             filmListe.addAll(hobbit, birdBox, theRoom,test1,test2);
         }
 
-        Collections.sort(filmListe);
-
         return filmListe;
     }
 

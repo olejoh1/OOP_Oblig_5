@@ -46,7 +46,7 @@ public class FilmController {
                 tittelLabel.setText(nyFilm.getTitle());
                 filmBeskrivelse.setText(nyFilm.getBeskrivelse());
                 filmUtgivelsesdato.setText(String.valueOf(nyFilm.getUtgivelsesdato()));
-                filmSpilletid.setText(String.valueOf(nyFilm.getLength()) + " timer");
+                filmSpilletid.setText(nyFilm.getLength() + " timer");
                 filmRemember = filmListe.getSelectionModel().getSelectedIndex();
                 System.out.println(filmRemember);
             }
