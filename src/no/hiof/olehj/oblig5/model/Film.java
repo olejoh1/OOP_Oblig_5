@@ -15,6 +15,10 @@ public class Film extends Produksjon implements Comparable<Film>{
         super(title, length);
     }
 
+    public String getBilde() {
+        return bilde;
+    }
+
     @Override
     public int compareTo(Film other){
         return this.getTitle().compareTo(other.getTitle());

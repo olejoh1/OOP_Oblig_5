@@ -10,6 +10,10 @@ import java.io.*;
 
 public class DataHandler {
 
+    private static int arTall = 0;
+
+    private static int alfaTall = 0;
+
     private final static ObservableList<Film> filmListe = FXCollections.observableArrayList();
 
     public static ObservableList<Film> hentFilmData(File dataFilmListe){
@@ -50,4 +54,5 @@ public class DataHandler {
     public static void slettFilm(int filmRemember){
         filmListe.remove(filmRemember);
     }
+
 }

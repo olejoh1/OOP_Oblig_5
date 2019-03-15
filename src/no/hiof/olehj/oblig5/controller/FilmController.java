@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
@@ -34,7 +36,10 @@ public class FilmController {
     private TextField filmSpilletid;
 
     @FXML
-    public void initialize(){
+    private ImageView filmBilde;
+
+    @FXML
+    public void initialize() {
 
         File kilde = new File("filmer_1000.csv");
 
@@ -47,6 +52,8 @@ public class FilmController {
                 filmBeskrivelse.setText(nyFilm.getBeskrivelse());
                 filmUtgivelsesdato.setText(String.valueOf(nyFilm.getUtgivelsesdato()));
                 filmSpilletid.setText(nyFilm.getLength() + " timer");
+                Image bilde = new Image("https://image.tmdb.org/t/p/w500/" + nyFilm.getBilde());
+                filmBilde.setImage(bilde);
                 filmRemember = filmListe.getSelectionModel().getSelectedIndex();
                 System.out.println(filmRemember);
             }
@@ -58,34 +65,48 @@ public class FilmController {
     }
 
     public void nyFilm(ActionEvent actionEvent) {
-        AnonymousClasses.ny();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                MainJavaFX minApplikasjon = MainJavaFX.getInstance();
+
+                minApplikasjon.gaaTilNy();
+            }
+        };
+        r.run();
     }
 
     public void slettFilm(ActionEvent actionEvent) {
-        AnonymousClasses.slett();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                DataHandler.slettFilm(FilmController.getFilmRemember());
+            }
+        };
+        r.run();
     }
 
     public void redigerFilm(ActionEvent actionEvent) {
-        AnonymousClasses.edit();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                MainJavaFX minApplikasjon = MainJavaFX.getInstance();
+
+                minApplikasjon.gaaTilEdit();
+            }
+        };
+        r.run();
     }
 
     public static int getFilmRemember() {
         return filmRemember;
     }
-}
 
-class AnonymousClasses{
-    static void edit(){
-        MainJavaFX minApplikasjon = MainJavaFX.getInstance();
+    public void sorterAr(ActionEvent actionEvent) {
 
-        minApplikasjon.gaaTilEdit();
     }
-    static void ny(){
-        MainJavaFX minApplikasjon = MainJavaFX.getInstance();
 
-        minApplikasjon.gaaTilNy();
-    }
-    static void slett(){
-        DataHandler.slettFilm(FilmController.getFilmRemember());
+    public void sorterAlfabetisk(ActionEvent actionEvent) {
+
     }
 }
