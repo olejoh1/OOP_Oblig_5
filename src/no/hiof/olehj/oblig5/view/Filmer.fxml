@@ -102,7 +102,11 @@
                 <Font size="33.0" />
             </font>
         </Label>
-      <Button layoutX="35.0" layoutY="81.0" mnemonicParsing="false" onAction="#sorterAlfabetisk" snapToPixel="false" text="Alfabetisk" />
+      <Button layoutX="35.0" layoutY="81.0" mnemonicParsing="false" onAction="#sorterAlfabetisk" snapToPixel="false" text="Alfabetisk">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
       <Button layoutX="193.0" layoutY="81.0" mnemonicParsing="false" onAction="#sorterAr" text="År">
          <padding>
             <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />

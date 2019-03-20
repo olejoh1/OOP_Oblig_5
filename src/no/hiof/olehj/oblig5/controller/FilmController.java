@@ -47,7 +47,7 @@ public class FilmController {
     @FXML
     public void initialize() {
 
-        filmListe.setItems(DataHandler.hentFilmData(new File("filmer_1000.csv")));
+        filmListe.setItems(DataHandler.hentFilmData());
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override

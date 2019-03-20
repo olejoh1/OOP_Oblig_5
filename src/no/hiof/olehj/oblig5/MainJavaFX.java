@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import no.hiof.olehj.oblig5.data.DataHandler;
 
 import java.io.IOException;
 
@@ -86,4 +87,10 @@ public class MainJavaFX extends Application{
         Application.launch(args);
     }
 
+    @Override
+
+    public void stop(){
+        System.out.println("Lagret");
+        DataHandler.skrivTilFil();
+    }
 }
