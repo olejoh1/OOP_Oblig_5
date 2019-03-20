@@ -21,6 +21,8 @@ public class FilmController {
 
     private static int filmRemember;
 
+    private String image;
+
     private ObservableList<Film> listeMedFilmer;
 
     @FXML
@@ -52,9 +54,16 @@ public class FilmController {
                 tittelLabel.setText(nyFilm.getTitle());
                 filmBeskrivelse.setText(nyFilm.getBeskrivelse());
                 filmUtgivelsesdato.setText(String.valueOf(nyFilm.getUtgivelsesdato()));
+
+                if(nyFilm.getBilde() == "no_image"){
+                    image = "https://www.losriosriverrunners.com/uploads/thumb_image_not_available.png";
+                }
+                else if(nyFilm.getBilde() != "no_image"){
+                    image = "https://image.tmdb.org/t/p/w500" + nyFilm.getBilde();
+                }
+
+                filmBilde.setImage( new Image(image));
                 filmSpilletid.setText(nyFilm.getLength() + " timer");
-                /*Image bilde = new Image("https://image.tmdb.org/t/p/w500/" + nyFilm.getBilde());
-                filmBilde.setImage(bilde);*/
                 filmRemember = filmListe.getSelectionModel().getSelectedIndex();
                 System.out.println(filmRemember);
             }

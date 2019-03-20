@@ -25,6 +25,8 @@ public class NyController {
     @FXML
     private TextField filmSpilletid;
 
+    @FXML
+    private TextField filmBilde;
 
 
     public void cancelNy(ActionEvent actionEvent) {
@@ -35,11 +37,20 @@ public class NyController {
 
     public void filmNy(ActionEvent actionEvent) {
 
+        String nyBilde;
+
         String nyFilmTittel = filmTittel.getText();
         String nyFilmBeskrivelse = filmBeskrivelse.getText();
         LocalDate nyFilmUtgivelsesdato = filmUtgivelsesdato.getValue();
         int nyFilmSpilletid = Integer.valueOf(filmSpilletid.getText());
-        String nyBilde = null;
+
+        if(filmBilde.getText().trim().isEmpty()){
+            nyBilde = "no_image";
+        }
+        else{
+            nyBilde = filmBilde.getText();
+        }
+
 
         Film nyFilm = new Film(nyFilmTittel,nyFilmBeskrivelse,nyFilmSpilletid,nyFilmUtgivelsesdato,nyBilde);
 

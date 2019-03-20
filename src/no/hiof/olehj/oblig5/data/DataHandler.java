@@ -53,6 +53,9 @@ public class DataHandler {
 
     public static void leggTilFim(Film nyFilm){
         filmListe.add(nyFilm);
+
+        
+
     }
 
     public static void slettFilm(int filmRemember){

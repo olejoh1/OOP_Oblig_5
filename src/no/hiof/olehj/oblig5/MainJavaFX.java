@@ -31,7 +31,7 @@ public class MainJavaFX extends Application{
             fxmlInnlaster.setLocation(getClass().getResource("view/Filmer.fxml"));
             Parent hovedLayout = fxmlInnlaster.load();
 
-            Scene hovedScene = new Scene(hovedLayout, 627, 548);
+            Scene hovedScene = new Scene(hovedLayout, 803, 441);
 
 
             primaryStage.setScene(hovedScene);
