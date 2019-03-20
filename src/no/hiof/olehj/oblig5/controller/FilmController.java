@@ -5,12 +5,10 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.util.Callback;
 import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
@@ -71,8 +69,28 @@ public class FilmController {
 
         });
 
+        filmListe.setCellFactory(new Callback<ListView<Film>, ListCell<Film>>() {
+            @Override
+            public ListCell<Film> call(ListView<Film> filmListView) {
+                return new FilmCelle();
+            }
+        });
 
         filmListe.getSelectionModel().select(0);
+    }
+
+    private static class FilmCelle extends ListCell<Film> {
+        @Override
+        protected void updateItem(Film enFilm, boolean empty){
+            super.updateItem(enFilm, empty);
+
+            if(empty || enFilm == null){
+                setText(null);
+            }
+            else {
+                setText(enFilm.getTitle());
+            }
+        }
     }
 
     public void nyFilm(ActionEvent actionEvent) {
@@ -121,3 +139,4 @@ public class FilmController {
         DataHandler.SortByAlfa();
     }
 }
+
