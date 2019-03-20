@@ -2,6 +2,7 @@ package no.hiof.olehj.oblig5.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -14,9 +15,13 @@ import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
 
+import java.util.ArrayList;
+
 public class FilmController {
 
     private static int filmRemember;
+
+    private ObservableList<Film> listeMedFilmer;
 
     @FXML
     private ListView<Film> filmListe;
@@ -39,7 +44,9 @@ public class FilmController {
     @FXML
     public void initialize() {
 
-        filmListe.setItems(DataHandler.hentFilmData());
+        System.out.println(DataHandler.hentFilmData());
+
+        listeMedFilmer.addAll(DataHandler.hentFilmData());
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override
@@ -99,10 +106,10 @@ public class FilmController {
     }
 
     public void sorterAr(ActionEvent actionEvent) {
-
+        DataHandler.SortByYear();
     }
 
     public void sorterAlfabetisk(ActionEvent actionEvent) {
-
+        DataHandler.SortByAlfa();
     }
 }
