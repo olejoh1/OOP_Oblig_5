@@ -88,7 +88,7 @@ public class FilmController {
                 setText(null);
             }
             else {
-                setText(enFilm.getTitle());
+                setText(enFilm.getTitle() + "-" + enFilm.getUtgivelsesdato().getYear());
             }
         }
     }
