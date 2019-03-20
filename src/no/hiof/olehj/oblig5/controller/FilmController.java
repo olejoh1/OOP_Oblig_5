@@ -15,6 +15,7 @@ import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class FilmController {
@@ -46,7 +47,7 @@ public class FilmController {
     @FXML
     public void initialize() {
 
-        filmListe.setItems(DataHandler.hentFilmData());
+        filmListe.setItems(DataHandler.hentFilmData(new File("filmer_1000.csv")));
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override

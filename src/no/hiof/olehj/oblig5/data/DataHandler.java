@@ -18,9 +18,7 @@ public class DataHandler {
 
     private final static ObservableList<Film> filmListe = FXCollections.observableArrayList();
 
-    public static ObservableList<Film> hentFilmData(){
-
-        File kilde = new File("filmer_1000.csv");
+    public static ObservableList<Film> hentFilmData(File kilde){
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(kilde))){
             String linje;
@@ -51,10 +49,20 @@ public class DataHandler {
         return filmListe;
     }
 
-    public static void leggTilFim(Film nyFilm){
+    public static void leggTilFim(Film nyFilm, File kilde){
         filmListe.add(nyFilm);
 
-        
+        try(BufferedWriter bufretSkriver = new BufferedWriter(new FileWriter(kilde))){
+            for(Film skrivFilm : filmListe)
+                bufretSkriver.write(skrivFilm.getTitle() + ";" + skrivFilm.getBeskrivelse() + ";" + skrivFilm.getLength() + ";" + skrivFilm.getUtgivelsesdato() + ";" + skrivFilm.getBilde());
+                bufretSkriver.newLine();
+        }
+        catch (FileNotFoundException fnfe){
+            System.out.println(fnfe.getMessage());
+        }
+        catch (IOException ioexc){
+            System.out.println(ioexc.getLocalizedMessage());
+        }
 
     }
 

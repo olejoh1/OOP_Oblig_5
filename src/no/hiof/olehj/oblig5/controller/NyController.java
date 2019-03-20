@@ -9,6 +9,7 @@ import no.hiof.olehj.oblig5.model.Film;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.File;
 import java.time.LocalDate;
 
 public class NyController {
@@ -54,7 +55,7 @@ public class NyController {
 
         Film nyFilm = new Film(nyFilmTittel,nyFilmBeskrivelse,nyFilmSpilletid,nyFilmUtgivelsesdato,nyBilde);
 
-        DataHandler.leggTilFim(nyFilm);
+        DataHandler.leggTilFim(nyFilm, new File("filmer_1000.csv"));
 
         MainJavaFX minApplikasjon = MainJavaFX.getInstance();
 
