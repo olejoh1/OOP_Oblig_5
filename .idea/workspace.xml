@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717218b5-9c1c-4513-acc8-f87cf6b43e47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP_Oblig_5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP_Oblig_5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filmer_1000.csv" beforeDir="false" afterPath="$PROJECT_DIR$/filmer_1000.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/MainJavaFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/MainJavaFX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/controller/FilmController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/data/DataHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/data/DataHandler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/data/DataHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/data/DataHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/MainJavaFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/MainJavaFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/view/Filmer.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/controller/FilmController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/data/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/hiof/olehj/oblig5/data/DataHandler.java" afterDir="false" />
     </list>
@@ -32,10 +24,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/data/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#2318#2319#0" expanded="true" />
                 <element signature="e#2355#2356#0" expanded="true" />
                 <element signature="e#2408#2409#0" expanded="true" />
@@ -61,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/MainJavaFX.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+              <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/controller/FilmController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="986">
+              <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/model/Film.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="64" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="64" />
+            <state relative-caret-position="288">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="e#406#407#0" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
@@ -286,7 +277,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553078172973" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553079386473" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../gson-2.8.5.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -337,12 +328,12 @@
       <workItem from="1552632889806" duration="122000" />
       <workItem from="1552633118428" duration="3976000" />
       <workItem from="1552637248136" duration="13096000" />
-      <workItem from="1553076750668" duration="1383000" />
+      <workItem from="1553076750668" duration="2586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19592000" />
+    <option name="totallyTimeSpent" value="20795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -440,13 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PATH_TO_FX$/javafx.fxml.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="360" selection-start-line="360" selection-end-line="360" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/controller/test.java" />
     <entry file="file://$PROJECT_DIR$/out/production/OOP_Oblig_5/no/hiof/olehj/oblig5/view/Filmer.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -464,21 +448,6 @@
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/model/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="64" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -522,17 +491,39 @@
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/MainJavaFX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PATH_TO_FX$/javafx.fxml.jar!/javafx/fxml/FXMLLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="2425" column="79" lean-forward="true" selection-start-line="2425" selection-start-column="79" selection-end-line="2425" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/model/Film.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/controller/FilmController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+        <state relative-caret-position="986">
+          <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -541,10 +532,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/no/hiof/olehj/oblig5/data/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2318#2319#0" expanded="true" />
             <element signature="e#2355#2356#0" expanded="true" />
             <element signature="e#2408#2409#0" expanded="true" />

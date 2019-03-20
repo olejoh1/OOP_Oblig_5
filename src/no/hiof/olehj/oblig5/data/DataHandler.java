@@ -1,18 +1,12 @@
 package no.hiof.olehj.oblig5.data;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import no.hiof.olehj.oblig5.model.Film;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Array;
+import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -26,8 +20,9 @@ public class DataHandler {
 
     public static ObservableList<Film> hentFilmData(){
 
+        File kilde = new File("filmer_1000.csv");
 
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("filmer_1000.csv"))){
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(kilde))){
             String linje;
 
             while((linje = bufferedReader.readLine()) != null){

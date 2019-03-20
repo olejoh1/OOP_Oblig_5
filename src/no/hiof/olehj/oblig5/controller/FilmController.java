@@ -44,9 +44,7 @@ public class FilmController {
     @FXML
     public void initialize() {
 
-        System.out.println(DataHandler.hentFilmData());
-
-        listeMedFilmer.addAll(DataHandler.hentFilmData());
+        filmListe.setItems(DataHandler.hentFilmData());
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override
@@ -55,8 +53,8 @@ public class FilmController {
                 filmBeskrivelse.setText(nyFilm.getBeskrivelse());
                 filmUtgivelsesdato.setText(String.valueOf(nyFilm.getUtgivelsesdato()));
                 filmSpilletid.setText(nyFilm.getLength() + " timer");
-                Image bilde = new Image("https://image.tmdb.org/t/p/w500/" + nyFilm.getBilde());
-                filmBilde.setImage(bilde);
+                /*Image bilde = new Image("https://image.tmdb.org/t/p/w500/" + nyFilm.getBilde());
+                filmBilde.setImage(bilde);*/
                 filmRemember = filmListe.getSelectionModel().getSelectedIndex();
                 System.out.println(filmRemember);
             }
