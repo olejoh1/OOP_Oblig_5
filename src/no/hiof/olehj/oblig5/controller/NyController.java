@@ -56,8 +56,6 @@ public class NyController {
 
         DataHandler.hentFilmData().add(nyFilm);
 
-        DataHandler.skrivTilFil();
-
         MainJavaFX minApplikasjon = MainJavaFX.getInstance();
 
         minApplikasjon.gaaTilHovedScene();

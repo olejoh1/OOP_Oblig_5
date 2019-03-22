@@ -90,6 +90,9 @@ public class MainJavaFX extends Application{
     @Override
 
     public void stop(){
+
+
+
         System.out.println("Lagret");
         DataHandler.skrivTilFil();
     }
