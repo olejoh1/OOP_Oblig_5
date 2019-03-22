@@ -42,7 +42,28 @@ public class NyController {
         String nyFilmTittel = filmTittel.getText();
         String nyFilmBeskrivelse = filmBeskrivelse.getText();
         LocalDate nyFilmUtgivelsesdato = filmUtgivelsesdato.getValue();
-        int nyFilmSpilletid = Integer.valueOf(filmSpilletid.getText());
+        int nyFilmSpilletid = 1;
+
+
+        if(filmUtgivelsesdato.getValue() == null || filmUtgivelsesdato.equals("")){
+            nyFilmUtgivelsesdato = LocalDate.now();
+        }
+
+        if(filmTittel.getText().isEmpty()){
+            nyFilmTittel = "Ingen titel";
+        }
+
+        if(filmBeskrivelse.getText().isEmpty()){
+            nyFilmBeskrivelse = "Ingen beskrivelse";
+        }
+
+        if(filmSpilletid.getText().isEmpty()){
+            nyFilmSpilletid = 0;
+        }
+        else {
+            nyFilmSpilletid = Integer.valueOf(filmSpilletid.getText());
+        }
+
 
         if(filmBilde.getText().trim().isEmpty()){
             nyBilde = "no_image";

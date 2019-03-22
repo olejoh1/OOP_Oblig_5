@@ -4,10 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import no.hiof.olehj.oblig5.data.DataHandler;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class MainJavaFX extends Application{
 
@@ -91,9 +94,23 @@ public class MainJavaFX extends Application{
 
     public void stop(){
 
+        Alert shutdown = new Alert(Alert.AlertType.CONFIRMATION);
+        shutdown.setTitle("Shutdown");
+        shutdown.setHeaderText("Ready to shutdown");
+        shutdown.setContentText("Vil du lagre endringene du har gjort?");
+
+        ButtonType confirm = new ButtonType("Ja");
+        ButtonType cancel = new ButtonType("Nei");
+
+        shutdown.getButtonTypes().setAll(confirm, cancel);
+
+        Optional<ButtonType> lagre = shutdown.showAndWait();
+
+        if(lagre.get() == confirm){
+            System.out.println("Lagret");
+            DataHandler.skrivTilFil();
+        }
 
 
-        System.out.println("Lagret");
-        DataHandler.skrivTilFil();
     }
 }
