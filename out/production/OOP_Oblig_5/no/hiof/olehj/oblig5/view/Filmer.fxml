@@ -57,7 +57,7 @@
                                         <Font name="System Bold" size="18.0" />
                                     </font>
                                 </Label>
-                                <TextArea fx:id="filmBeskrivelse" editable="false" prefHeight="200.0" prefWidth="200.0" text="Beskrivelse" GridPane.columnIndex="1">
+                                <TextArea fx:id="filmBeskrivelse" editable="false" prefHeight="200.0" prefWidth="200.0" text="Beskrivelse" wrapText="true" GridPane.columnIndex="1">
                                     <font>
                                         <Font name="Arial" size="12.0" />
                                     </font>
