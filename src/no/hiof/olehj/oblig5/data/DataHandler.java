@@ -69,11 +69,4 @@ public class DataHandler {
 
     }
 
-    public static void slettFilm(int filmRemember){
-        filmListe.remove(filmRemember);
-    }
-
-    public static void slettAll(){
-        filmListe.removeAll(filmListe);
-    }
 }

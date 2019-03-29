@@ -2,7 +2,6 @@ package no.hiof.olehj.oblig5.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +27,7 @@ public class FilmController {
 
     private String image;
 
-    private static ObservableList<Film> listeMedFilmer = FXCollections.observableArrayList();
+    private static ObservableList<Film> listeMedFilmer = DataHandler.hentFilmData();
 
     @FXML
     private ListView<Film> filmListe;
@@ -52,7 +51,6 @@ public class FilmController {
     public void initialize() {
 
         filmListe.setItems(DataHandler.hentFilmData());
-        listeMedFilmer.addAll(DataHandler.hentFilmData());
 
         filmListe.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Film>() {
             @Override
@@ -131,7 +129,9 @@ public class FilmController {
                 Optional<ButtonType> result = slett.showAndWait();
 
                 if (result.get() == slettKnapp){
-                    DataHandler.slettFilm(FilmController.getFilmRemember());
+                    listeMedFilmer.remove(FilmController.getFilmRemember());
+
+                    filmListe.setItems(listeMedFilmer);
                 }
                 else if(result.get() == slettAll){
                     Alert sure = new Alert(Alert.AlertType.CONFIRMATION);
@@ -158,7 +158,9 @@ public class FilmController {
                         Optional<ButtonType> result3 = last.showAndWait();
 
                         if(result3.get() == deleteAll){
-                            DataHandler.slettAll();
+                            listeMedFilmer.removeAll(listeMedFilmer);
+
+                            filmListe.setItems(listeMedFilmer);
                         }
                     }
                 }
@@ -185,6 +187,10 @@ public class FilmController {
 
     public static int getFilmRemember() {
         return filmRemember;
+    }
+
+    public static ObservableList<Film> getListeMedFilmer(){
+        return listeMedFilmer;
     }
 
     public void sorterAr(ActionEvent actionEvent) {

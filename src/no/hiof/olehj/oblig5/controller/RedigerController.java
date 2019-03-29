@@ -9,7 +9,6 @@ import no.hiof.olehj.oblig5.MainJavaFX;
 import no.hiof.olehj.oblig5.data.DataHandler;
 import no.hiof.olehj.oblig5.model.Film;
 
-import java.io.File;
 import java.time.LocalDate;
 
 
@@ -35,7 +34,7 @@ public class RedigerController {
     @FXML
     public void initialize(){
 
-        film = DataHandler.hentFilmData().get(filmRemember);
+        film = FilmController.getListeMedFilmer().get(filmRemember);
 
         filmTittel.setText(film.getTitle());
         filmBeskrivelse.setText(film.getBeskrivelse());
